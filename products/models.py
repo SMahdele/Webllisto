@@ -12,7 +12,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     product_name = models.CharField(max_length=50)
-    tags = models.CharField(max_length=100)
+    tags = models.CharField(max_length=100)  # other Model name was not mentioned to which many to many relationship is to be create.
     Image = models.ImageField(upload_to='product_images')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     description = models.CharField(max_length=100)
